@@ -22,7 +22,7 @@
       text-align: center;
     }
 
-     .container {
+    .container {
       position: relative;
       text-align: center;
     } 
@@ -31,17 +31,33 @@
       position: relative;
     }
     
+    .hyperlink_row1 {
+      position: relative;
+    }
+
+    .hyperlink_row2 {
+      position: relative;
+    }
+
+    #image {  
+      display: inline;  
+      margin-left: auto;  
+      margin-right: auto;  
+      border: 3px ridge white;  
+      padding: 2px;  
+    }
+    
     @font-face {
-    font-family: genshin_font;
-    src: url("fontfolder/genshinfont-webfont.woff2") format("woff2"),
-         url("fontfolder/genshinfont-webfont.woff") format("woff");
+      font-family: genshin_font;
+      src: url("fontfolder/genshinfont-webfont.woff2") format("woff2"),
+      url("fontfolder/genshinfont-webfont.woff") format("woff");
     }
     
     h1 {
-    font-family: genshin_font;
-    color: white;
-    font-size: 60px;
-    text-align: center;
+      font-family: genshin_font;
+      color: white;
+      font-size: 60px;
+      text-align: center;
     }
     
   </style>
@@ -49,15 +65,24 @@
 </head>
 <body>
 
-<div class="container">
-  <div class="background">
-    <img src="homepage-images/liyue.jpg">   
+  <div class="container">
+    <div class="background">
+      <img src="homepage-images/liyue.jpg">   
+    </div>
+
+    <div class="homepage_title">
+      <h1>Genshin Impact: Four Archons</h1>
+    </div>
+  </div> 
+  
+  <div class="hyperlinks_row1">
+    <img id="image" src="homepage-images/homepage-venti.png">
+    <img id="image"src="homepage-images/homepage-zhongli.png">
   </div>
 
-  <div class="homepage_title">
-    <h1>Genshin Impact: Four Archons</h1>
+  <div class="hyperlinks_row2">
+    <img id="image" src="homepage-images/homepage-ei.png">
+    <img id="image" src="homepage-images/homepage-nahida.png">
   </div>
-
-</div>  
   
 </body>
