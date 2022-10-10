@@ -9,10 +9,11 @@
   <meta name="keywords" content="HTML, CSS, JavaScript">
   <meta name="revised" content="24-Sept-2022">
   
+  
   <style>
     @import url("css/style.css");
     body {
-      background-image: url("homepage-images/liyue.jpg");
+      background-image: url("homepage-images/celestia.png");
       background-size: cover;
       overflow: auto;
       margin: 0;
@@ -48,8 +49,7 @@
       display: inline;  
       margin-left: auto;  
       margin-right: auto;  
-      border: 3px ridge white;  
-      padding: 2px;
+      padding: 7px;
     }
 
     .zhonglicontainer {
@@ -59,9 +59,8 @@
     #zhongliimage {  
       display: inline;  
       margin-left: auto;  
-      margin-right: auto;  
-      border: 3px ridge white;  
-      padding: 2px;
+      margin-right: auto;   
+      padding: 7px;
     }
 
     .eicontainer {
@@ -71,9 +70,8 @@
     #eiimage {  
       display: inline;  
       margin-left: auto;  
-      margin-right: auto;  
-      border: 3px ridge white;  
-      padding: 2px;
+      margin-right: auto;
+      padding: 7px;
     }
 
     .nahidacontainer {
@@ -83,9 +81,8 @@
     #nahidaimage {  
       display: inline;  
       margin-left: auto;  
-      margin-right: auto;  
-      border: 3px ridge white;  
-      padding: 2px;
+      margin-right: auto;
+      padding: 7px;
     }
 
     .ventioverlay {
@@ -179,30 +176,64 @@
       transform: translate(-50%, -50%);
       text-align: center;
       font-family: genshin_font;
+      
+    }
+
+    .hyperlinks a{
+      text-decoration: none;
     }
 
     .centerimages{
-      position: absolute;
-      text-align: center;
-      transform: translate(6%, 0%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
+
+    .zoom {
+      transition: transform .2s;
+      margin: 0 auto;
+    }
+
+    .zoom:hover {
+      -ms-transform: scale(1.10); 
+      -webkit-transform: scale(1.10); 
+      transform: scale(1.10); 
+    }
+
+    .header {
+      padding:1px;
+      text-align: left;
+      background: #b0bdf1;
+      
+    }
+
+    h2 {
+    font-family: genshin_font;
+    color: white;
+    font-size: 20px;
+    transform: translate(2%,0);
+    }
+    
   </style>
+
   
 </head>
 
 <body>
+  
   
   <div class="container">
     <div class="background"> 
       <h1></h1>
     </div>
 
-    <div class="homepage_title">
+    <div class="homepage_title zoom">
       <h1>Genshin Impact: Four Archons</h1>
     </div>
 
   </div>
-    <div class="centerimages">
+  
+  <div class="centerimages">
     <div class="hyperlinks">
       <div class="venticontainer">
         <img src="homepage-images/homepage-venti.png" class="ventiimage" >
@@ -246,4 +277,4 @@
   
 </body>
 
-</html>
+</html> 
