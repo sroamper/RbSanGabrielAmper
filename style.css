@@ -1,10 +1,17 @@
-
 html, body {
   height: 100%;
   width: 100%;
 }
 
-body {
+/*Importing genshin_font*/
+@font-face {
+      font-family: genshin_font;
+      src: url("fontfolder/genshinfont-webfont.woff2") format("woff2"),
+           url("fontfolder/genshinfont-webfont.woff") format("woff");
+    }
+
+/*Homepage background properties*/
+    body {
       background-image: url("homepage-images/celestia.png");
       background-size: cover;
       overflow: hidden;
@@ -12,27 +19,67 @@ body {
       opacity: 1;
     }
 
-    .background {
-      position: absolute;
-      text-align: center;
-      z-index: -1;
-    }
-
-     .container {
-      position: relative;
-      text-align: center;
-    } 
-   
+/*Formatting main header of the homepage*/
     .homepage_title {
       position: relative;
       text-shadow: -10px 7px #3b3e86;   
     }
 
+
+/*Formatting title text*/
+    h1 {
+      font-family: genshin_font;
+      color: white;
+      font-size: 65px;
+      text-align: center;
+    }
+
+/*The following two classes are for zoom (title text)*/
+    .zoom {
+      transition: transform .2s;
+      margin: 0 auto;
+    }
+
+    .zoom:hover {
+      -ms-transform: scale(1.10); 
+      -webkit-transform: scale(1.10); 
+      transform: scale(1.10); 
+    }
+
+/*Formatting the four image links collectively*/
     .hyperlinks div {
       display: inline-block;
-     
     }
+
+  /*No line under links*/
+    .hyperlinks a{
+      text-decoration: none;
+    }
+
+  /*No line under links*/
+    .centerimages{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+/*Hyperlink text*/
+    .hyperlink{
+      color: white;
+      font-size: 60px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+      text-align: center;
+      font-family: genshin_font;
+      
+    }
+
     
+/*----VENTI----*/
     .venticontainer {
     position: relative;
     }
@@ -41,39 +88,6 @@ body {
       display: inline;  
       margin-left: auto;  
       margin-right: auto;  
-      padding: 7px;
-    }
-
-    .zhonglicontainer {
-    position: relative;
-    }
-    
-    #zhongliimage {  
-      display: inline;  
-      margin-left: auto;  
-      margin-right: auto;   
-      padding: 7px;
-    }
-
-    .eicontainer {
-    position: relative;
-    }
-    
-    #eiimage {  
-      display: inline;  
-      margin-left: auto;  
-      margin-right: auto;
-      padding: 7px;
-    }
-
-    .nahidacontainer {
-    position: relative;
-    }
-    
-    #nahidaimage {  
-      display: inline;  
-      margin-left: auto;  
-      margin-right: auto;
       padding: 7px;
     }
 
@@ -93,7 +107,21 @@ body {
     bottom: 0;
     height: 100%;
     }
+
+
+
+/*---ZHONGLI---*/
+    .zhonglicontainer {
+    position: relative;
+    }
     
+    #zhongliimage {  
+      display: inline;  
+      margin-left: auto;  
+      margin-right: auto;   
+      padding: 7px;
+    }
+
     .zhonglioverlay {
       position: absolute;
       bottom: 100%;
@@ -109,6 +137,20 @@ body {
     .zhonglicontainer:hover .zhonglioverlay {
     bottom: 0;
     height: 100%;
+    }
+
+
+
+/*----EI----*/
+    .eicontainer {
+    position: relative;
+    }
+    
+    #eiimage {  
+      display: inline;  
+      margin-left: auto;  
+      margin-right: auto;
+      padding: 7px;
     }
 
     .eioverlay {
@@ -128,6 +170,20 @@ body {
     height: 100%;
     }
 
+
+
+/*----NAHIDA----*/
+    .nahidacontainer {
+    position: relative;
+    }
+    
+    #nahidaimage {  
+      display: inline;  
+      margin-left: auto;  
+      margin-right: auto;
+      padding: 7px;
+    }
+
     .nahidaoverlay {
       position: absolute;
       bottom: 100%;
@@ -144,64 +200,9 @@ body {
     bottom: 0;
     height: 100%;
     }
+
     
-    @font-face {
-    font-family: genshin_font;
-    src: url("fontfolder/genshinfont-webfont.woff2") format("woff2"),
-         url("fontfolder/genshinfont-webfont.woff") format("woff");
-    }
+
+/*End of hyperlink formatting*/
     
-    h1 {
-    font-family: genshin_font;
-    color: white;
-    font-size: 65px;
-    text-align: center;
-    }
-    .hyperlink{
-      color: white;
-      font-size: 60px;
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      -webkit-transform: translate(-50%, -50%);
-      -ms-transform: translate(-50%, -50%);
-      transform: translate(-50%, -50%);
-      text-align: center;
-      font-family: genshin_font;
-      
-    }
-
-    .hyperlinks a{
-      text-decoration: none;
-    }
-
-    .centerimages{
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .zoom {
-      transition: transform .2s;
-      margin: 0 auto;
-    }
-
-    .zoom:hover {
-      -ms-transform: scale(1.10); 
-      -webkit-transform: scale(1.10); 
-      transform: scale(1.10); 
-    }
-
-    .header {
-      padding:1px;
-      text-align: left;
-      background: #b0bdf1;
-      
-    }
-
-    h2 {
-    font-family: genshin_font;
-    color: white;
-    font-size: 20px;
-    transform: translate(2%,0);
-    }
+    
