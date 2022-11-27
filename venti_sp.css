@@ -3,151 +3,62 @@ html, body {
   width: 100%;
 }
 
+/*Importing genshin_font*/
+@font-face {
+font-family: genshin_font;
+src: url("fontfolder/genshinfont-webfont.woff2") format("woff2"),
+     url("fontfolder/genshinfont-webfont.woff") format("woff");
+}
+
+/*Formatting background*/
 body {
-      background-image: url("venti-images/mondstadt_bg.png");
-      opacity: 1;
-      margin : 0px ;
+  background-image: url("venti-images/mondstadt_bg.png");
+  opacity: 1;
+  margin : 0px ;
+  background-size:cover;
+}
 
-    }
+/*Formatting navigation*/
+.nav_links {
+  padding:2px 2px 2px;
+  position: sticky;
+  font-family: genshin_font;
+  border-bottom: #1e3f66 solid 5px;
+  background-color: rgb(10, 52, 99, 0.5);
+  height: 30px;
+  z-index: 9999;
+  top:0;
+}
 
+/*Nav links*/
+nav a {
+  color: #FFFFFF;
+  text-decoration: none;
+  font-family: genshin_font;
+  text-align: left;
+  box-shadow: inset 0 0 0 0 #1c2e4a;
+  margin: 0 -.25rem;
+  padding: 0 .25rem;
+  transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
+  margin-left: 10px;
+}
 
-    #header{
-      height : 40px ;
-      text-align : left ;
-      position: sticky;
-      top: 0;
-    }
-
-    #footer{
-      height : 40px ;
-      text-align : left ;
-      position: sticky;
-
-    }
-
-    .footer {
-      padding:2px 2px 2px;
-      position: sticky;
-      font-family: genshin_font;
-      
-
-      height: 400px;
-      z-index: 9999;
-  
-    }
-
-    .sourcestext p{
-      font-family: genshin_font;
-      color: #FFFFFF;
-      font-size: 15px;
-      border-top: #1e3f66 solid 5px;
-            background-color: rgb(10, 52, 99, 0.5);
-    }
+/*Nav links transition*/
+a:hover {
+  box-shadow: inset 100px 0 0 0 #1c2e4a;
+}
 
 
-    .space{
-      height: 60px;
-    }
+/*----------- Start of Body -----------*/
 
-    .background {
-      position: absolute;
-      text-align: center;
-    }
-
-    td {
-      vertical-align: top;
-    }
-    
-    @font-face {
-    font-family: genshin_font;
-    src: url("fontfolder/genshinfont-webfont.woff2") format("woff2"),
-         url("fontfolder/genshinfont-webfont.woff") format("woff");
-    }
- 
-    a{
-      text-decoration: none;
-      font-family: genshin_font;
-      text-align: left;
-      
-    }
-    
-    a {
-      box-shadow: inset 0 0 0 0 #1c2e4a;
-      margin: 0 -.25rem;
-      padding: 0 .25rem;
-      transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
-      margin-left: 10px;
-    }
-    
-    a:hover {
-      box-shadow: inset 100px 0 0 0 #1c2e4a;
-    }
-      
-    
-    .header {
-      padding:2px 2px 2px;
-      position: sticky;
-      font-family: genshin_font;
-      border-bottom: #1e3f66 solid 5px;
-      background-color: rgb(10, 52, 99, 0.5);
-      height: 30px;
-      z-index: 9999;
-      top:0;
-    }
-
-    div>a {
-      font-size: 20px;
-    }
-
-    
-
-    h2 {
-    font-family: genshin_font;
-    color: #FFFFFF;
-    font-size: 60px;
-    z-index: 2;
-    position: relative;
-    text-shadow: 5px 5px #1c2e4a;
-    }
-
-    .basicinfo2{
-      font-family: genshin_font;
-      color: #FFFFFF;
-      font-size: 18px;
-      text-shadow: 2px 1px #1c2e4a;
-      
-    }
-
-
-.basicinfo1{
-      font-family: genshin_font;
-      color: #FFFFFF;
-      font-size: 25px;
-      text-shadow: 2px 1px #1c2e4a;
-      text-align: center;
-      background-color: rgba(0,63,76,0.3);
-      border-radius: 4px;
-  width:30%;
-    }
-
-
-    .venti{
-      font-family: genshin_font;
-      color: #FFFFFF;
-      font-size: 70px;
-      z-index: 2;
-      text-shadow: 5px 5px #1c2e4a;
-      text-align: center;
-      
-    }
-
-
-
+/*Formatting main Venti image*/
 .venti_image{
   width: 450px;
   display: inline-block;
   vertical-align: top;
 }
+
+/*Table containing basic info, two pictures*/
 
 .table1{
   width: 70%;
@@ -155,17 +66,56 @@ body {
   vertical-align: top;
 }
 
-.venticuteimage{
+td {
+  vertical-align: top;
+}
+
+/*Venti: table title*/
+.venti{
+  font-family: genshin_font;
+  color: #FFFFFF;
+  font-size: 70px;
+  z-index: 2;
+  text-shadow: 5px 5px #1c2e4a;
+  text-align: center;
+}
+
+/*Image with Venti, Aether, and Paimon*/
+.venticuteimage1{
   max-width: 95%;
   border:5px solid #FFFFFF;
 }
 
-.venticuteimage2{
+/*Image of Mondstadt*/
+.mondstadtimage{
   max-width:86%;
   border:5px solid #FFFFFF;
 }
 
+/*'Basic Character Information' title*/
+.basicinfo_header{
+  font-family: genshin_font;
+  color: #FFFFFF;
+  font-size: 25px;
+  text-shadow: 2px 1px #1c2e4a;
+  text-align: center;
+  background-color: rgba(0,63,76,0.3);
+  border-radius: 4px;
+  width:30%;
+}
 
+/*Text below 'Basic Character Information'*/
+.basicinfo_subtext{
+  font-family: genshin_font;
+  color: #FFFFFF;
+  font-size: 18px;
+  text-shadow: 2px 1px #1c2e4a;
+}
+
+
+
+
+/*Article containing the character stories*/
 .stories{
   width: 70%;
   height: 500px;
@@ -175,6 +125,7 @@ body {
   overflow: scroll;
 }
 
+/*Character Story titles (1, 2, etc.)*/
 .storiesheaders{
   font-family: genshin_font;
       color: #FFFFFF;
@@ -182,12 +133,38 @@ body {
       text-shadow: 3px 3px #1c2e4a;
       text-align: center;
   padding:0px;
-  
 }
 
+/*Body text of the character stories*/
 .storiestext{
   font-family: genshin_font;
   color: #FFFFFF;
   font-size: 15px;
   padding: 0px 20px;
+}
+
+/*Venti demo video*/
+.demo_video{
+  text-align: center;
+}
+
+/*Set space*/
+.space{
+  height:50px;
+}
+
+/*Formatting footer*/
+footer{
+  text-align : left;
+  position: sticky;
+  padding:2px 2px 2px;
+  border-top: #1e3f66 solid 5px;
+  background-color: rgb(10, 52, 99, 0.5);
+}
+
+/*Footer text*/
+.sourcestext{
+  font-family: genshin_font;
+  color: #FFFFFF;
+  font-size: 15px;
 }
