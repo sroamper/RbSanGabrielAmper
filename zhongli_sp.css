@@ -1,31 +1,29 @@
-    @import url("css/style.css");
+@import url("css/style.css");
 
+/*Importing genshin_font*/
     @font-face {
     font-family: genshin_font;
     src: url("fontfolder/genshinfont-webfont.woff2") format("woff2"),
          url("fontfolder/genshinfont-webfont.woff") format("woff");
     }
 
+/*Background*/
     body {
       background-color: #b99c71;
       background-image: url("zhongli-images/zhongli_namecard.jpg");
       background-size: cover;
       margin : 0px ;
-      height : 100{07c2b926d154bd5dc241f595a572d3349d41d98f2484798a4a616f4fafe1ebc0} ;
-      width : 100{07c2b926d154bd5dc241f595a572d3349d41d98f2484798a4a616f4fafe1ebc0} ;
     }
 
     html{
-      margin : 0px ;
-      height : 100{07c2b926d154bd5dc241f595a572d3349d41d98f2484798a4a616f4fafe1ebc0} ;
-      width : 100{07c2b926d154bd5dc241f595a572d3349d41d98f2484798a4a616f4fafe1ebc0} ;
-      
+      margin : 0px ; 
     }
 
     * {
     box-sizing: border-box;
   } 
-    
+
+/*Header and footer*/
     #header, #footer {
       height : 40px ;
       text-align : left ;
@@ -66,6 +64,7 @@
             background-color: rgb(106, 83, 41, 0.5);
     }
 
+/*Navigation Links*/
     a{
       text-decoration: none;
       font-family: genshin_font;
@@ -82,10 +81,14 @@
       box-shadow: inset 100px 0 0 0 #614539;
     }
 
-
-    #row1 {
+    #section {
       width:80%;
       margin: 40px auto;
+    }
+
+/*Row containing the basic character information*/
+    #row1 {
+      border-radius: 25px;
       padding: 10px;
       background-color: #B59667;
       background-image: linear-gradient(#B59667, #B09061, #B18C54);
@@ -93,7 +96,9 @@
       display:flex;
     }
 
+/*Includes the picture of Zhongli*/
     #column1 {
+      border-radius: 25px;
       width:30%;
       margin: 20px 30px;
       padding: 10px;
@@ -102,8 +107,10 @@
       overflow: hidden;
       float:left;
     }
-    
+
+/*Includes the basic character information */
     #column2 {
+      border-radius: 25px;
       width: 60%;
       float: right;
       background-color: #C6A16A;
@@ -120,6 +127,7 @@
     }
 
     #CharaInfoImages{
+      border-radius: 25px;
       display: inline-block;
       background-color: #AE8445;
       background-image: linear-gradient(#96733D, #AB8040, #B0823E);
@@ -128,11 +136,11 @@
       margin: auto;
     }
 
+/*Row containing the character stories*/
     #row2 {
-      width:80%;
+      border-radius: 25px;
       background-color: #B18C54;
       background-image: linear-gradient(#B18C54, #C29857, #CEA260);
-      margin: 30px auto;
       padding: 30px;
     }
     
@@ -166,4 +174,13 @@
     font-size: 15px;
     text-align: left;
     position: relative;
+    }
+
+#row3 {
+      border-radius: 25px;
+      background-color: #B18C54;
+      background-image: linear-gradient(#B18C54, #C29857, #CEA260);
+      padding: 30px;
+      text-align: center;
+      overflow: flex;
     }
